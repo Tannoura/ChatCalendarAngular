@@ -1,0 +1,36 @@
+<div>
+  <!-- Formulaire d'ajout d'une nouvelle séance -->
+  <h2>Ajouter une séance</h2>
+  <form (submit)="addSeance()">
+    <label for="startDateTime">Date et heure de début :</label>
+    <input type="datetime-local" id="startDateTime" [(ngModel)]="newSeance.startDateTime" name="startDateTime" required>
+    <br>
+    <label for="endDateTime">Date et heure de fin :</label>
+    <input type="datetime-local" id="endDateTime" [(ngModel)]="newSeance.endDateTime" name="endDateTime" required>
+    <br>
+    <label for="description">Description :</label>
+    <input type="text" id="description" [(ngModel)]="newSeance.description" name="description" required>
+    <br>
+    <button type="submit">Ajouter la séance</button>
+  </form>
+
+  <!-- Affichage des séances existantes -->
+   <!-- Affichage des séances existantes sous forme de tableau -->
+   <h2>Liste des séances</h2>
+   <table>
+     <thead>
+       <tr>
+         <th>Date et heure de début</th>
+         <th>Date et heure de fin</th>
+         <th>Description</th>
+       </tr>
+     </thead>
+     <tbody>
+       <tr *ngFor="let seance of seances">
+         <td>{{ seance.startDateTime }}</td>
+         <td>{{ seance.endDateTime }}</td>
+         <td>{{ seance.description }}</td>
+       </tr>
+     </tbody>
+   </table>
+ </div>

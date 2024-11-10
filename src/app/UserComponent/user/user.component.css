@@ -1,0 +1,4 @@
+.small-image {
+  max-width: 100px; /* Définissez la largeur maximale souhaitée */
+  max-height: 100px; /* Définissez la hauteur maximale souhaitée */
+}

@@ -1,0 +1,7 @@
+<!-- calender.component.html -->
+<div class="calendar-controls">
+  <button (click)="switchToDayView()">Vue par jour</button>
+  <button (click)="switchToMonthView()">Vue par Semaine</button>
+  <button (click)="switchToWeekView()">Vue par Mois</button>
+</div>
+<full-calendar #calendar [options]="calendarOptions"></full-calendar>
