@@ -5,13 +5,16 @@ import { CalenderComponent } from './CalendarComponent/calender/calender.compone
 import { ChatComponent } from './ChatComponent/chat/chat.component';
 import { ImageComponent } from './ImageComponent/image/image.component';
 import { UserComponent } from './UserComponent/user/user.component';
+import { NotificationComponent } from './notification/notification.component';
 
 const routes: Routes = [
   { path: 'seances', component: SeanceComponent },
     {path:'schedule',component:CalenderComponent },
     { path: 'chat/:userId', component: ChatComponent },
     { path: 'image', component: ImageComponent },
-    { path: 'user', component: UserComponent }
+    { path: 'user', component: UserComponent },
+    { path: 'notif/:userId', component: NotificationComponent }
+
 ];
 
 @NgModule({

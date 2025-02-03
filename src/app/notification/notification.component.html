@@ -1,0 +1,18 @@
+<h2>📢 Notifications pour l'utilisateur {{ userId }}</h2>
+
+<!-- Formulaire d'envoi de notification -->
+<div>
+  <input type="text" [(ngModel)]="recipientId" placeholder="ID du destinataire">
+  <input type="text" [(ngModel)]="message" placeholder="Message">
+  <button (click)="sendNotification()">📩 Envoyer</button>
+</div>
+
+<!-- Liste des notifications -->
+<div *ngIf="notifications.length > 0">
+  <h3>📩 Notifications reçues</h3>
+  <ul>
+    <li *ngFor="let notification of notifications">
+      <strong>De: {{ notification.senderId }}</strong> - {{ notification.message }}
+    </li>
+  </ul>
+</div>

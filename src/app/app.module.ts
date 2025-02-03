@@ -14,6 +14,7 @@ import { ImageComponent } from './ImageComponent/image/image.component';
 import { MaterialFileInputModule } from 'ngx-material-file-input';
 import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { NotificationComponent } from './notification/notification.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,17 +22,11 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     CalenderComponent,
     ChatComponent,
     UserComponent,
-    ImageComponent
+    ImageComponent,
+    NotificationComponent
   ],
   imports: [
-    BrowserModule,
-    AppRoutingModule,
-    FormsModule,
-    HttpClientModule,
-    FullCalendarModule,
-    MaterialFileInputModule,// Added MaterialFileInputModule import
-    MatCardModule,// Added MatCardModule import
-    MatFormFieldModule, // Added MatFormFieldModule import
+    BrowserModule,FormsModule,AppRoutingModule,HttpClientModule,FullCalendarModule,MaterialFileInputModule,MatCardModule,MatFormFieldModule
   ],
   providers: [],
   bootstrap: [AppComponent]

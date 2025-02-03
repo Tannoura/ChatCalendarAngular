@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Seance } from '../../Models/Seance';
 import { SeanceService } from '../../Services/seance.service';
+import { NotificationWebSocketService } from '../../Services/notification-web-socket.service';
 @Component({
   selector: 'app-seance',
   templateUrl: './seance.component.html',
@@ -31,7 +32,6 @@ getAllSeances(): void {
   addSeance(): void {
     this.seanceService.addSeance(this.newSeance)
       .subscribe((seance: Seance) => {
-        console.log('Séance ajoutée avec succès :', seance);
         // Réinitialisez la nouvelle séance pour permettre d'ajouter d'autres séances
         this.newSeance = {
           id: 0,
@@ -39,10 +39,13 @@ getAllSeances(): void {
           endDateTime: '',
           description: ''
         };
+        this.getAllSeances(); // Mettez à jour la liste des séances après l'ajout
+
       }, error => {
         console.error('Une erreur s\'est produite lors de l\'ajout de la séance :', error);
       });
   }
+
 
 
 }

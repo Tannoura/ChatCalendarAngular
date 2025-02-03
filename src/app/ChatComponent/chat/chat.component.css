@@ -225,3 +225,20 @@ body {
 .message_template {
   display: none;
 }
+
+.video-container {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.video-wrapper {
+  text-align: center;
+}
+
+video {
+  width: 300px;
+  height: 200px;
+  border: 1px solid #ccc;
+  background-color: black;
+}

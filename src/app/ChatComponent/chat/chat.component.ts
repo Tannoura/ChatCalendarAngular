@@ -20,7 +20,6 @@ export class ChatComponent implements OnInit{
     this.lisenerMessage();
   }
 
-
   sendMessage(){
     const chatMessage = {
       message:this.messageInput,
@@ -35,8 +34,6 @@ export class ChatComponent implements OnInit{
       this.messageList = messages.map((item:any)=>({
         ...item,
         message_side:item.user === this.userId ? 'sender':'receiver'
-
-
     }))
   });
   }
